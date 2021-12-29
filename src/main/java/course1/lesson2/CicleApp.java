@@ -16,7 +16,8 @@ public class CicleApp {
         }
         System.out.println(getDividedByThree());
 
-
+        chess();
+        usFlag();
     }
 
     public static int getDividedByThree() {
@@ -26,5 +27,31 @@ public class CicleApp {
             }
         }
         return 0;
+    }
+
+    public static void chess() {
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void usFlag() {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (i>4 || j > 5) {
+                    System.out.print("0 ");
+                } else {
+                    System.out.print("* ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
