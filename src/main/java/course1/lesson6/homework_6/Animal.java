@@ -1,7 +1,7 @@
 package course1.lesson6.homework_6;
 
 /**
- *  Суперкласс наследниками которого будут классы Dog и Cat
+ * Суперкласс наследниками которого будут классы Dog и Cat
  */
 public class Animal {
     protected final int DIST_RUN;
@@ -14,18 +14,19 @@ public class Animal {
         this.name = name;
     }
 
-    public void run (int distance) {
+    public void run(int distance) {
 
         if (distance <= DIST_RUN) {
-            System.out.println("Животное " + name + " бежит");
+            System.out.println("Животное " + name + " пробежало " + distance + " м.");
         } else {
-            System.out.println("Животное " + name +" не добежало, батарейка села");
+            System.out.println("Животное " + name + " не добежало, батарейка села");
         }
     }
-    public void swim (int distance) {
+
+    public void swim(int distance) {
 
         if (distance <= DIST_SWIM) {
-            System.out.println("Животное " + name + " плывет");
+            System.out.println("Животное " + name + " проплыло " + distance + " м.");
         } else {
             System.out.println("Животное " + name + " утонуло");
         }

@@ -14,7 +14,7 @@ public class Cat extends Animal {
         if (distance <= DIST_RUN) {
             System.out.println("Кот " + name + " пробежал " + distance + " м.");
         } else {
-            System.out.println("Кот " + name +" не добежал, слишком большая дистанция");
+            System.out.println("Кот " + name + " не добежал, слишком большая дистанция");
         }
     }
 

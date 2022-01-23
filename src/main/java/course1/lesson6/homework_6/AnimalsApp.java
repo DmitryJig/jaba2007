@@ -17,7 +17,7 @@ public class AnimalsApp {
         AnimalsCounter(animals);
     }
 
-    // метод для подсчета животных, котов и собак, можно было вернуть Map но пока думаю рановато
+    // метод для подсчета животных, котов и собак
     public static void AnimalsCounter(Animal[] animals) {
         int animalCount = 0;
         int catCount = 0;

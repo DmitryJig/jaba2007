@@ -13,7 +13,7 @@ public class Dog extends Animal {
         if (distance <= DIST_RUN) {
             System.out.println("Пес " + name + " пробежал " + distance + " м.");
         } else {
-            System.out.println("Пес " + name +" не добежал, слишком большая дистанция");
+            System.out.println("Пес " + name + " не добежал, слишком большая дистанция");
         }
     }
 
@@ -22,7 +22,7 @@ public class Dog extends Animal {
         if (distance <= DIST_RUN) {
             System.out.println("Пес " + name + " проплыл " + distance + " м.");
         } else {
-            System.out.println("Пес " + name +" утонул, слишком большая дистанция");
+            System.out.println("Пес " + name + " утонул, слишком большая дистанция");
         }
     }
 }
