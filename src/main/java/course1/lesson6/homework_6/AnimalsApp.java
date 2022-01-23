@@ -1,9 +1,11 @@
 package course1.lesson6.homework_6;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * В этом классе будут создаваться объекты классов Cat и Dog и вызываться их методы
+ */
 public class AnimalsApp {
     public static void main(String[] args) {
 
