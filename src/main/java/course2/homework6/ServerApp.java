@@ -25,24 +25,24 @@ public class ServerApp {
         dataInputStream = new DataInputStream(socket.getInputStream()); //берем входящий поток информации
         dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
-            try {
-                while (true) {
-                    String message = dataInputStream.readUTF(); //тоже блокирующий метод, останавливаемся и ждем сообщение и пишем это в строку
+        try {
+            while (true) {
+                String message = dataInputStream.readUTF(); //тоже блокирующий метод, останавливаемся и ждем сообщение и пишем это в строку
 
-                    if ("/end".equals(message)) { //убиваем бесконечный цикл position pill
+                if ("/end".equals(message)) { //убиваем бесконечный цикл position pill
 
-                        dataOutputStream.writeUTF(message);
+                    dataOutputStream.writeUTF(message);
 
-                        System.out.println("Завершение работы сервера");
-                        break;
-                    }
-                    System.out.println("Клиент прислал " + message);
+                    System.out.println("Завершение работы сервера");
+                    break;
                 }
-                System.out.println("Соединение на сервере разорвано");
-                closeConnection();
-            } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("Клиент прислал " + message);
             }
+            System.out.println("Соединение на сервере разорвано");
+            closeConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void sendMessage() {
@@ -62,9 +62,21 @@ public class ServerApp {
 
     private void closeConnection() {
         try {
-            dataOutputStream.close(); // ничего что кучкой в трай кэч их? или по отдельности надо?
+            dataOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
             dataInputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
             serverSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
             socket.close();  //тут первым закрыл серверсокет, или надо было сокет?
         } catch (IOException e) {
             e.printStackTrace();
