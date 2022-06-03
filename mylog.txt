@@ -1,0 +1,8 @@
+мая 31, 2022 12:27:43 PM course3.lesson6.efremov.AppJavaLogger main
+FINE: Program started
+мая 31, 2022 12:27:43 PM course3.lesson6.efremov.AppJavaLogger m
+INFO: a = abc, i = 4
+мая 31, 2022 12:27:43 PM course3.lesson6.efremov.AppJavaLogger m
+SEVERE: / by zero
+мая 31, 2022 12:27:43 PM course3.lesson6.efremov.AppJavaLogger main
+FINE: Program started
