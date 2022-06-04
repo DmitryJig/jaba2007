@@ -1,13 +1,10 @@
 package course3.lesson6.homework6;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
-public class Task1 {
+public class Homework6 {
 
     /**
      * Написать метод, которому в качестве аргумента передается не пустой одномерный
@@ -41,16 +38,9 @@ public class Task1 {
 
     public boolean checkAvailable1And4(int[] array, int num1, int num2){
         List<Integer> list = IntStream.of(array).boxed().toList();
-        if(list.stream().anyMatch(x -> x != num1 || x!= num2) ){
+        if(list.stream().anyMatch(x -> x != num1 && x!= num2) || !list.contains(num1) || !list.contains(num2)){
             return false;
         }
-        if (list)
-        return false;
-    }
-
-    public static void main(String[] args) {
-        Task1 task1 = new Task1();
-        int[] array = {1, 2, 3, 4};
-        System.out.println(task1.checkAvailable1And4(array));
+        return true;
     }
 }
