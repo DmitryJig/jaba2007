@@ -85,7 +85,9 @@ class Homework6Test {
     /**
      * Метод проверяет неверные комбинации цифр в массиве (на выдачу false)
      * из файла-источника
-     * Не смог найти как принять в параметры метода массив, по этому принимаем строку и парсим ее
+     * Не смог найти как из файла принять в параметры метода массив,
+     * по этому принимаем строку и парсим ее
+     * к сожалению таким способом не парсится Integer.MAX_VALUE и MIN_VALUE
      * @param numbers строка с цифрами разделенными пробелами
      */
     @ParameterizedTest
@@ -95,7 +97,4 @@ class Homework6Test {
         int[] arr = Arrays.stream(numbers.split("\\p{Zs}")).mapToInt(n -> Integer.parseInt(n)).toArray();
         Assertions.assertFalse(homework6.checkAvailable1And4(arr, 1, 4));
     }
-
-
-
 }
